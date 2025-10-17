@@ -241,15 +241,15 @@ void PrintGrid(const std::vector<std::vector<T>>& grid) {
   for (const auto& row : grid) {
     for (const auto& ele : row) {
       if (ele == 1) {
-        std::cout << TERM_RED << ele << RESET << " , ";
+        std::cout << TERM_RED << ele << TERM_RESET << " , ";
       } else if (ele == 2) {
-        std::cout << TERM_BLUE << ele << RESET << " , ";
+        std::cout << TERM_BLUE << ele << TERM_RESET << " , ";
       } else if (ele == 3) {
-        std::cout << TERM_GREEN << ele << RESET << " , ";
+        std::cout << TERM_GREEN << ele << TERM_RESET << " , ";
       } else if (ele == 4) {
-        std::cout << TERM_YELLOW << ele << RESET << " , ";
+        std::cout << TERM_YELLOW << ele << TERM_RESET << " , ";
       } else if( ele == std::numeric_limits<T>::max()) {
-        std::cout << TERM_CYAN << "I" << RESET << " , ";
+        std::cout << TERM_CYAN << "I" << TERM_RESET << " , ";
       } else {
         std::cout << ele << " , ";
       }
