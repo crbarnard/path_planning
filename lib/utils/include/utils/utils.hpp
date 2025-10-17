@@ -92,11 +92,13 @@ class Node {
   bool operator==(const Node& p) const;
 };
 
+}
+
 /**
  * @brief Hash for node struct
  */
 template<>
-class std::hash<Node> {
+class std::hash<path_planning::Node> {
 public:
 
   /**
@@ -104,10 +106,12 @@ public:
    * @param n Node for which the hash is to be calculated
    * @return hash value
    */
-  size_t operator () (const Node& n) const {
+  size_t operator () (const path_planning::Node& n) const {
     return std::hash<int>()(n.x_) ^ std::hash<int>()(n.y_);
   }
 };
+
+namespace path_planning {
 
 /**
  * @brief Hash for node struct that returns node id
@@ -219,6 +223,7 @@ bool CompareCoordinates(const Node& p1, const Node& p2);
  */
 bool checkOutsideBoundary(const Node& node, const int n);
 
+
 template<typename T,
          typename = typename std::enable_if<std::is_arithmetic<T>::value, T>::type
         >
@@ -257,6 +262,7 @@ void PrintGrid(const std::vector<std::vector<T>>& grid) {
   }
   std::cout << '\n';
 }
+
 
 /**
  * @brief Structure to generate a hash for std::pair
@@ -346,8 +352,10 @@ struct CompareNodeKeyPairCoordinatesAndKeys {
   }
 };
 
+}
+
 template <>
-class std::greater<NodeKeyPair> {
+class std::greater<path_planning::NodeKeyPair> {
  public:
    /**
     * @brief Overload () operator for std::greater to use for comparison by
@@ -357,23 +365,25 @@ class std::greater<NodeKeyPair> {
     * @return result of comparison
     * @details Compares the key values
     */
-  bool operator()(const NodeKeyPair& nk1, const NodeKeyPair& nk2) const {
+  bool operator()(const path_planning::NodeKeyPair& nk1, const path_planning::NodeKeyPair& nk2) const {
     return nk1.key > nk2.key;
   }
 };
 
 template <>
-class std::hash<NodeKeyPair> {
+class std::hash<path_planning::NodeKeyPair> {
  public:
   /**
    * @brief Hash function for the node key pair
    * @param nkp node key pair who's jas is to be calculated
    * @return hash value
    */
-  size_t operator()(const NodeKeyPair& nkp) const {
-    return std::hash<Node>()(nkp.node);
+  size_t operator()(const path_planning::NodeKeyPair& nkp) const {
+    return std::hash<path_planning::Node>()(nkp.node);
   }
 };
+
+namespace path_planning {
 
 /**
  * @brief The idea behind this class is to create a structure similar to a
