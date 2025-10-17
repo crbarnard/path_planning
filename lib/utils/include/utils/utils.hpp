@@ -23,6 +23,8 @@
 #define WHITE "\x1b[1;37m"
 #define RESET "\x1b[1;0m"
 
+namespace path_planning {
+
 /**
  * @brief Node class
  * @param x_ X value
@@ -433,5 +435,8 @@ private:
   std::priority_queue<NodeKeyPair, std::vector<NodeKeyPair>, std::greater<NodeKeyPair>> pq;
   std::unordered_set<NodeKeyPair, std::hash<NodeKeyPair>, CompareNodeKeyPairCoordinates> s; // Needs to just compare the coordinates and
 };
+
+
+}
 
 #endif  // UTILS_H
