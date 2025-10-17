@@ -15,6 +15,9 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+
+namespace path_planning {
+    
 /**
  * @brief Class for objects that plan using the LPA* algorithm
  */
@@ -182,5 +185,7 @@ class LPAStar : public Planner {
   size_t max_time_step_ = 10;
   bool create_random_obstacles_ = false;
 };
+
+}
 
 #endif  // LPA_STAR_H

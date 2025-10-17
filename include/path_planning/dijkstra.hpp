@@ -12,6 +12,8 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+namespace path_planning {
+
 /**
  * @brief Class for objects that plan using the Dijkstra algorithm
  */
@@ -40,5 +42,8 @@ class Dijkstra : public Planner {
       std::unordered_set<Node, NodeIdAsHash, compare_coordinates>& closed_list,
       const Node& start, const Node& goal);
 };
+
+
+}
 
 #endif  // DIJKSTRA_H

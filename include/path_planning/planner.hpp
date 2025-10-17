@@ -14,6 +14,9 @@
 
 #include "utils/utils.hpp"
 
+
+namespace path_planning {
+    
 /**
  *  Abstract class that is inherited by concerete implementaions of planner
  *  classes. The Plan function is a pure virtual funciton that is overloaded
@@ -101,5 +104,7 @@ class Planner {
   const std::vector<std::vector<int>> original_grid_;
   const int n_;
 };
+
+}
 
 #endif  // PLANNER_HPP

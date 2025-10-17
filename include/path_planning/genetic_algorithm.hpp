@@ -12,6 +12,9 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+
+namespace path_planning {
+    
 /**
  * @brief Class for objects that plan using the Genetic algorithm
  */
@@ -134,5 +137,7 @@ class GeneticAlgorithm : public Planner {
   bool found_ = false;
   bool shorten_chromosome_ = false;
 };
+
+}
 
 #endif  // GENETIC_ALGORITHM_H

@@ -15,6 +15,10 @@
 
 #include "path_planning/a_star.hpp"
 
+
+namespace path_planning {
+    
+
 std::tuple<bool, std::vector<Node>> AStar::Plan(const Node& start,
                                                 const Node& goal) {
   grid_ = original_grid_;
@@ -124,3 +128,6 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+
+}

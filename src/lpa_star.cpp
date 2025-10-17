@@ -16,6 +16,8 @@
 #include <random>
 #endif  // BUILD_INDIVIDUAL
 
+namespace path_planning {
+    
 constexpr int pause_time = 500;  // milliseconds
 
 void LPAStar::SetDynamicObstacles(
@@ -289,3 +291,6 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+
+}

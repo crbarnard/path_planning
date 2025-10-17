@@ -15,6 +15,9 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+
+namespace path_planning {
+    
 /**
  * @brief Class for objects that plan using the RRT* algorithm
  */
@@ -96,5 +99,7 @@ class RRTStar : public Planner {
   double threshold_ = 1.5;       // TODO: set up in cstor
   int max_iter_x_factor_ = 500;  // TODO: set up in cstor
 };
+
+}
 
 #endif  // RRT_STAR_H

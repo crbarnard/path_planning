@@ -6,12 +6,17 @@
 
 #include <cmath>
 
+
+    
+
 #ifdef BUILD_INDIVIDUAL
 #include <random>
 #endif  // BUILD_INDIVIDUAL
 
 #include "path_planning/jump_point_search.hpp"
 
+namespace path_planning {
+  
 Node JumpPointSearch::jump(const Node& new_point, const Node& motion,
                            const int id) {
   Node next_point = new_point + motion;
@@ -166,3 +171,6 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+
+}

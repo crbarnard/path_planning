@@ -9,12 +9,16 @@
 #include <unordered_set>
 #include <vector>
 
+
+
 #ifdef BUILD_INDIVIDUAL
 #include <random>
 #endif  // BUILD_INDIVIDUAL
 
 #include "path_planning/dijkstra.hpp"
 
+namespace path_planning {
+    
 std::tuple<bool, std::vector<Node>> Dijkstra::Plan(const Node& start,
                                                    const Node& goal) {
   grid_ = original_grid_;
@@ -115,3 +119,5 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+}

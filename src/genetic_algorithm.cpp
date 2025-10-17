@@ -12,6 +12,9 @@
 #include <limits>
 #include <random>
 
+
+namespace path_planning {
+    
 constexpr int random_range_max = 100;
 constexpr int inverted_probabilty_mutate = 10;
 
@@ -372,3 +375,5 @@ int main() {
   PrintPathInOrder(path_vector, start, goal, grid);
 }
 #endif  // BUILD_INDIVIDUAL
+
+}

@@ -21,6 +21,8 @@ easily iterate over all neighbours to update them
 #include <random>
 #include <vector>
 
+namespace path_planning {
+    
 // constants
 constexpr double half_grid_unit = 0.5;
 constexpr double precision_limit = 0.000001;
@@ -247,3 +249,6 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+
+}

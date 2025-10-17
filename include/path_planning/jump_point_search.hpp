@@ -13,6 +13,9 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+namespace path_planning {
+    
+
 /**
  * @brief Class for objects that plan using the jump point search algorithm
  */
@@ -47,4 +50,7 @@ class JumpPointSearch : public Planner {
   std::unordered_set<int> pruned;
   Node start_, goal_;
 };
+
+}
+
 #endif  // JUMP_POINT_SEARCH_H

@@ -15,6 +15,10 @@
 #include <thread>
 #include <tuple>
 
+
+namespace path_planning {
+    
+
 #ifdef CUSTOM_DEBUG_HELPER_FUNCION
 void AntColony::PrintAntPath(Ant& ant) const {
   for (size_t k = 1; k < ant.path_.size(); k++)
@@ -250,3 +254,5 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+}

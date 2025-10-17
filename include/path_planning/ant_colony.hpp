@@ -13,6 +13,8 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+namespace path_planning {
+
 /**
  * @brief Class for Ant objects
  */
@@ -104,5 +106,7 @@ class AntColony : public Planner {
   std::vector<Node> motions_;
   std::unordered_map<std::pair<int, int>, double, pair_hash> pheromone_edges_;
 };
+
+}
 
 #endif  // ANT_COLONY_H

@@ -5,6 +5,11 @@
 #include <cmath>
 #include <thread>
 
+
+
+namespace path_planning {
+    
+
 #ifdef BUILD_INDIVIDUAL
 #include <random>
 #endif  // BUILD_INDIVIDUAL
@@ -265,3 +270,6 @@ int main() {
   return 0;
 }
 #endif  // BUILD_INDIVIDUAL
+
+
+}

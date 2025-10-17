@@ -14,6 +14,8 @@
 #include "path_planning/planner.hpp"
 #include "utils/utils.hpp"
 
+namespace path_planning {
+
 /**
  * @brief Class for objects that plan using the D* Lite algorithm
  */
@@ -178,5 +180,7 @@ class DStarLite : public Planner {
   int time_step_ = 0;
   bool create_random_obstacles_ = false;
 };
+
+}
 
 #endif  // D_STAR_LITE_H
