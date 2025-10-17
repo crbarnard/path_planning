@@ -11,6 +11,9 @@
 
 #include "utils/utils.hpp"
 
+
+namespace path_planning {
+
 // constants
 constexpr int spacing_for_grid = 10;
 
@@ -258,4 +261,6 @@ void LazyPQ::remove(const NodeKeyPair& t) {
       break;
     }
   }
+}
+
 }
