@@ -13,15 +13,15 @@
 #include <unordered_set>
 #include <vector>
 
-#define BLACK "\x1b[1;30m"
-#define RED "\x1b[1;31m"
-#define GREEN "\x1b[1;32m"
-#define YELLOW "\x1b[1;33m"
-#define BLUE "\x1b[1;34m"
-#define MAGENTA "\x1b[1;35m"
-#define CYAN "\x1b[1;36m"
-#define WHITE "\x1b[1;37m"
-#define RESET "\x1b[1;0m"
+#define TERM_BLACK "\x1b[1;30m"
+#define TERM_RED "\x1b[1;31m"
+#define TERM_GREEN "\x1b[1;32m"
+#define TERM_YELLOW "\x1b[1;33m"
+#define TERM_BLUE "\x1b[1;34m"
+#define TERM_MAGENTA "\x1b[1;35m"
+#define TERM_CYAN "\x1b[1;36m"
+#define TERM_WHITE "\x1b[1;37m"
+#define TERM_RESET "\x1b[1;0m"
 
 namespace path_planning {
 
